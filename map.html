@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>찾아오는 길 - (주)비에이텍</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .map-container {
+            width: 100%;
+            height: 450px;
+            background-color: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .contact-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .contact-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .contact-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .contact-card p {
+            color: var(--text-muted);
+        }
+        .transport-info {
+            margin-top: 50px;
+            background: var(--bg-color);
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-light);
+        }
+        .transport-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        .transport-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .transport-item i {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+        .transport-text h5 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .transport-text p {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">BA<span>Tech</span></a>
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul>
+                    <li><a href="intro.html">기업소개</a></li>
+                    <li><a href="product.html">주요제품</a></li>
+                    <li><a href="equipment.html">장비</a></li>
+                    <li><a href="sales_history.html">업력</a></li>
+                    <li><a href="map.html" class="active">찾아오는 길</a></li>
+                    <li><a href="inquiry.html">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header" style="background-image: linear-gradient(rgba(0, 95, 158, 0.8), rgba(0, 95, 158, 0.8)), url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2000&auto=format&fit=crop');">
+        <h1>찾아오는 길</h1>
+    </div>
+
+    <!-- Map Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">오시는 길</h2>
+            <p class="section-subtitle fade-in">비에이텍 본사 및 공장으로 찾아오시는 길을 안내해 드립니다.</p>
+
+            <div class="map-container fade-in">
+                <!-- Google Maps iframe (Using Chuncheon-si, Toegye-ro as a general center since Toegye-ro 1 is arbitrary) -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d100940.35411786518!2d127.65342415174066!3d37.86821106880295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3562e5b8812c3f8b%3A0xa97193ab466e3100!2sToegye-ro%2C%20Chuncheon-si%2C%20Gangwon-do!5e0!3m2!1sen!2skr!4v1714800000000!5m2!1sen!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contact-info-grid fade-in">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>본사 주소</h4>
+                    <p>강원특별자치도 춘천시 퇴계로 1번지</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h4>대표 전화</h4>
+                    <p>032-2957-363</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-fax"></i>
+                    <h4>팩스 번호</h4>
+                    <p>033-248-1234</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>이메일</h4>
+                    <p>aaa@naver.com</p>
+                </div>
+            </div>
+
+            <div class="transport-info fade-in">
+                <h3>대중교통 및 주차 안내</h3>
+                <div class="transport-item">
+                    <i class="fas fa-subway"></i>
+                    <div class="transport-text">
+                        <h5>지하철 이용 시</h5>
+                        <p>경춘선 남춘천역 하차 후 1번 출구에서 도보 약 15분 거리 (퇴계네거리 방향)</p>
+                    </div>
+                </div>
+                <div class="transport-item">
+                    <i class="fas fa-bus"></i>
+                    <div class="transport-text">
+                        <h5>버스 이용 시</h5>
+                        <p>간선버스: 11, 15, 64번 탑승 후 '퇴계동주민센터' 정류장 하차</p>
+                    </div>
+                </div>
+                <div class="transport-item">
+                    <i class="fas fa-car"></i>
+                    <div class="transport-text">
+                        <h5>자차 이용 및 주차</h5>
+                        <p>사옥 내 고객 전용 지상/지하 주차장이 완비되어 있습니다. (방문객 무료 주차 지원)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>(주)비에이텍</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 강원특별자치도 춘천시 퇴계로 1번지</p>
+                    <p><i class="fas fa-phone-alt"></i> 032-2957-363</p>
+                    <p><i class="fas fa-fax"></i> 033-248-1234</p>
+                    <p><i class="fas fa-envelope"></i> aaa@naver.com</p>
+                </div>
+                <div class="footer-links">
+                    <h4>회사 정보</h4>
+                    <ul>
+                        <li><a href="intro.html">기업소개</a></li>
+                        <li><a href="sales_history.html">업력</a></li>
+                        <li><a href="equipment.html">보유 장비</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>고객 지원</h4>
+                    <ul>
+                        <li><a href="product.html">주요제품</a></li>
+                        <li><a href="map.html">찾아오는 길</a></li>
+                        <li><a href="inquiry.html">문의하기</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 (주)비에이텍. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
