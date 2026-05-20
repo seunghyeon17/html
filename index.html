@@ -1,103 +1,652 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)비에이텍 - 워터펌프 전문기업</title>
-    <meta name="description" content="(주)비에이텍은 깨끗한 물의 가치를 창출하는 워터펌프 제작, 설치, 수리 전문기업입니다.">
-    <link rel="stylesheet" href="index.css">
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="(주) 비에이텍은 위생적이고 지속 가능한 물의 흐름을 설계하는 프리미엄 부스터 펌프 및 산업용 펌프 제조 전문 기업입니다. KC 위생안전기준, ISO 9001, MAIN-BIZ 인증 획득.">
+  <meta name="keywords" content="비에이텍, 부스터펌프, 산업용펌프, KC인증펌프, 위생안전기준, ISO9001, MAIN-BIZ, 펌프제조, 수처리">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="(주) 비에이텍 | 프리미엄 펌프 시스템 솔루션">
+  <meta property="og:description" content="지속 가능한 물의 흐름을 설계합니다. 글로벌 신뢰성 기반의 펌프 엔지니어링 기업 (주) 비에이텍.">
+  <meta property="og:image" content="assets/hero_bg.png">
+  <meta property="og:url" content="https://www.batech.co.kr">
+  
+  <title>(주) 비에이텍 | 프리미엄 펌프 시스템 솔루션</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header>
-        <div class="logo">
-            <i class="fa-solid fa-water" style="color: #0077b6;"></i>
-            <a href="index.html">(주)<span>비에이텍</span></a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="intro.html">기업소개</a></li>
-                <li><a href="product.html">주요제품</a></li>
-                <li><a href="equipment.html">장비</a></li>
-                <li><a href="sales_history.html">업력</a></li>
-                <li><a href="map.html">찾아오시는 길</a></li>
-                <li><a href="inquiry.html">문의</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- 1. Preloader Screen -->
+  <div id="preloader">
+    <div class="preloader-logo">
+      <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+      </svg>
+      BATECH<span>(주) 비에이텍</span>
+    </div>
+    <div class="preloader-line"></div>
+  </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>물의 가치를 높이는 기술</h1>
-            <p>워터펌프 제작, 설치, 수리 전문기업 (주)비에이텍이 함께합니다.</p>
-            <a href="inquiry.html" class="btn">프로젝트 문의하기</a>
+  <!-- 2. Sticky Header / Navigation -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#hero" class="logo">
+        BATECH<span>(주) 비에이텍</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link">HOME</a>
+        <a href="#about" class="nav-link">회사소개</a>
+        <a href="#history" class="nav-link">연혁</a>
+        <a href="#equipment" class="nav-link">제품 및 장비</a>
+        <a href="#trust" class="nav-link">글로벌 인증</a>
+        <a href="#directions" class="nav-link">찾아오는 길</a>
+        <a href="#contact" class="nav-link">문의하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section -->
+  <section class="hero" id="hero">
+    <img src="assets/hero_bg.png" alt="물 흐름 및 고해상도 설비" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tagline">Engineered Fluid Flow Solutions</span>
+      <h1 class="hero-title">
+        지속 가능한 물의 흐름을 설계합니다.
+        <span>글로벌 기술력과 타협하지 않는 정밀 엔지니어링으로 산업용 펌프의 새로운 표준을 제시합니다.</span>
+      </h1>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">문의하기</a>
+        <a href="#about" class="btn btn-secondary">회사소개</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span class="scroll-text">SCROLL</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Company Profile / Vision -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">ABOUT BATECH</span>
+        <h2 class="section-title">최고의 물 관리 솔루션을 위한 신뢰의 파트너</h2>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-message reveal">
+          <h3>(주) 비에이텍은 프리미엄 수처리 기술로 산업과 인간의 상생을 이끌어 냅니다.</h3>
+          <p>우리는 단순히 물을 보내는 기계를 만드는 것을 넘어, 가장 안전하고 에너지 효율적이며 지속 가능한 물의 유동 시스템을 설계합니다.</p>
+          <p>고객사의 안정적인 생산 인프라와 공공 안전을 위해, 비에이텍의 엔지니어들은 작은 부품 하나까지 엄격한 글로벌 품질 규격에 맞춰 설계 및 검증하고 있습니다.</p>
+        </div>
+        <div class="about-highlights reveal">
+          <div class="highlight-card">
+            <h4 class="highlight-title">지속 가능성 (Sustainability)</h4>
+            <p class="highlight-desc">초고효율 모터 시스템과 지능형 부스터 제어 기술을 통해 에너지 소비를 혁신적으로 줄입니다.</p>
+          </div>
+          <div class="highlight-card">
+            <h4 class="highlight-title">절대적인 신뢰성 (Reliability)</h4>
+            <p class="highlight-desc">정기적 검사와 가혹한 벤치 테스트를 거쳐 단 한 번의 중단도 허용하지 않는 안정성을 제공합니다.</p>
+          </div>
+          <div class="highlight-card">
+            <h4 class="highlight-title">글로벌 표준 기술 (Global Tech)</h4>
+            <p class="highlight-desc">ISO 및 국가 공인 위생 기준을 충족하는 철저한 공정 관리로 해외 시장에서도 검증받은 기술을 탑재합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. History & Stats Section -->
+  <section class="section history" id="history">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">HISTORY & PERFORMANCE</span>
+        <h2 class="section-title">지속 성장의 발자취</h2>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid reveal">
+        <div class="stat-item">
+          <div class="stat-number" data-target="20">20+</div>
+          <div class="stat-label">사업 업력 (Years)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="1000">1,000+</div>
+          <div class="stat-label">성공적인 프로젝트</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="100">100%</div>
+          <div class="stat-label">고객 파트너 만족도</div>
+        </div>
+      </div>
+
+      <!-- Timeline UI -->
+      <div class="timeline reveal">
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="timeline-year">2025</div>
+            <ul class="timeline-details">
+              <li>수도용 부스터 펌프 시스템 KC 위생안전기준 인증 획득</li>
+              <li>한국물기술인증원 신규 표준 설계 통과</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-year">2024</div>
+            <ul class="timeline-details">
+              <li>ISO 9001:2015 품질경영시스템 갱신 획득 (ICR)</li>
+              <li>경영혁신형 중소기업(MAIN-BIZ) 확인서 갱신 (중소벤처기업부)</li>
+              <li>차세대 지능형 부스터 펌프 제어 알고리즘 특허 출원</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="timeline-year">2020</div>
+            <ul class="timeline-details">
+              <li>대규모 산업단지 수처리 공동 설비 메인 펌프 공급</li>
+              <li>연구개발 전담부서 확장 설립</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-year">2015</div>
+            <ul class="timeline-details">
+              <li>비에이텍(주) 법인 전환 및 생산 공장 이전 설립</li>
+              <li>국내 대형 건설사 협력업체 정식 등록</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Equipment Section -->
+  <section class="section equipment" id="equipment">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">OUR EQUIPMENT</span>
+        <h2 class="section-title">최고의 엔지니어링 장비 라인업</h2>
+      </div>
+
+      <div class="equipment-grid">
+        <!-- Card 1 -->
+        <div class="product-card reveal">
+          <img src="assets/booster_pump.png" alt="부스터 펌프 시스템" class="product-img">
+          <div class="product-overlay">
+            <h3 class="product-title">인텔리전트 부스터 펌프 시스템</h3>
+            <p class="product-desc">실시간 사용 수량을 정밀 감지하여 필요한 압력만큼 모터를 제어하는 프리미엄 급수 시스템으로, 에너지 비용을 극대화하여 절감하고 위생 수준을 극대화합니다.</p>
+            <div class="product-specs">
+              <div class="spec-info">
+                <span class="spec-label">최대 토출량</span>
+                <span class="spec-value">1,200 m³/h</span>
+              </div>
+              <div class="spec-info">
+                <span class="spec-label">최대 압력</span>
+                <span class="spec-value">25 bar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card reveal">
+          <img src="assets/hero_bg.png" alt="고진공 공동 펌프" class="product-img">
+          <div class="product-overlay">
+            <h3 class="product-title">전진공동 & 특수 산업용 펌프</h3>
+            <p class="product-desc">열악한 캐비테이션 조건에서도 완벽한 자흡과 고진공을 유지하도록 정밀 주조된 벌류트, 수중, 정량 펌프로서 플랜트 설비 및 산업 단지의 가혹한 환경에 특화되어 있습니다.</p>
+            <div class="product-specs">
+              <div class="spec-info">
+                <span class="spec-label">진공도</span>
+                <span class="spec-value">-760 mmHg</span>
+              </div>
+              <div class="spec-info">
+                <span class="spec-label">주요 재질</span>
+                <span class="spec-value">STS316L / Duplex</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Facility Section -->
+  <section class="section facility" id="facility">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">MANUFACTURING CENTER</span>
+        <h2 class="section-title">선진 스마트 제조 설비</h2>
+      </div>
+
+      <div class="facility-layout">
+        <div class="facility-img-wrapper reveal">
+          <img src="assets/factory_facility.png" alt="비에이텍 생산 제조 라인" class="facility-img">
         </div>
         
-        <!-- Wave Decoration at bottom of hero -->
-        <div class="custom-shape-divider-bottom">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
+        <div class="facility-desc reveal">
+          <h3>엄격한 전수 검사 시스템과 무결점 생산 라인</h3>
+          <p>비에이텍의 전 공정은 부품의 입고 단계부터 최종 시운전 단계까지 디지털 통합 시스템(ERP/MES) 하에 철저히 추적 관리됩니다.</p>
+          <p>출하되는 모든 부스터 펌프 시스템은 전용 정밀 테스트 베드에서 수압, 유량, 진동 및 전류 변화를 100% 전수 시뮬레이션 검사한 후에 포장 및 배송됩니다.</p>
+          
+          <div class="facility-features">
+            <div class="feature-box">
+              <h4>100% 전수 검증</h4>
+              <p>실제 사용 조건과 동일한 압력 하에서 성능 곡선(H-Q) 부합 여부를 검증합니다.</p>
+            </div>
+            <div class="feature-box">
+              <h4>정밀 조립 공정</h4>
+              <p>숙련된 엔지니어들과 자동화 정밀 설비의 조화로 미세 누수를 원천 차단합니다.</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <h2 class="section-title">비에이텍 핵심 역량</h2>
-        <div class="service-cards">
+  <!-- 8. Global Trust & Certificates Section -->
+  <section class="section trust" id="trust">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">GLOBAL TRUST & STANDARDS</span>
+        <h2 class="section-title">글로벌 신뢰 및 인증</h2>
+      </div>
+
+      <div class="cert-grid">
+        <!-- KC 위생안전기준 -->
+        <div class="cert-card cert-kc reveal" data-cert="kc">
+          <div class="cert-icon-wrapper">
+            <div class="cert-icon">
+              <!-- Water and Shield drop icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M12 8v8M9 12h6" />
+              </svg>
+            </div>
+            <div class="cert-badge">위생안전인증</div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">KC 위생안전기준 인증서</h3>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">인증번호</span>
+                <span class="cert-meta-value">KCW-2025-0163</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">유효기한</span>
+                <span class="cert-meta-value">~ 2027. 09. 18</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">발급기관</span>
+                <span class="cert-meta-value">한국물기술인증원</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <span>상세 인증서 보기</span>
+            <span class="cert-arrow">→</span>
+          </div>
+        </div>
+
+        <!-- MAIN-BIZ -->
+        <div class="cert-card cert-mbiz reveal" data-cert="mbiz">
+          <div class="cert-icon-wrapper">
+            <div class="cert-icon">
+              <!-- Innovation upward trend icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 6l-9.5 9.5-5-5L1 18" />
+                <path d="M17 6h6v6" />
+              </svg>
+            </div>
+            <div class="cert-badge">경영혁신형 기업</div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">경영혁신형 중소기업 확인서</h3>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">확인서번호</span>
+                <span class="cert-meta-value">제 R180801-01794 호</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">유효기간</span>
+                <span class="cert-meta-value">~ 2027. 09. 13</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">발급기관</span>
+                <span class="cert-meta-value">중소벤처기업부</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <span>상세 인증서 보기</span>
+            <span class="cert-arrow">→</span>
+          </div>
+        </div>
+
+        <!-- ISO 9001 -->
+        <div class="cert-card cert-iso reveal" data-cert="iso">
+          <div class="cert-icon-wrapper">
+            <div class="cert-icon">
+              <!-- Global standard badge icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v8M8 12h8" />
+              </svg>
+            </div>
+            <div class="cert-badge">국제품질인증</div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">ISO 9001품질경영시스템</h3>
+            <div class="cert-meta">
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">인증서번호</span>
+                <span class="cert-meta-value">Q1291124</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">유효기간</span>
+                <span class="cert-meta-value">~ 2027. 08. 22</span>
+              </div>
+              <div class="cert-meta-item">
+                <span class="cert-meta-label">발급기관</span>
+                <span class="cert-meta-value">ICR (IAS/IAF 인정)</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <span>상세 인증서 보기</span>
+            <span class="cert-arrow">→</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Client Logos (B2B Partner Trust) -->
+  <section class="clients">
+    <div class="container">
+      <div class="client-slider">
+        <div class="client-logo">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M2 22h20M12 2v20M4 12h16"/>
+          </svg>
+          한국주택공사
+        </div>
+        <div class="client-logo">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/>
+          </svg>
+          수자원공사
+        </div>
+        <div class="client-logo">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M9 17V7l5 5-5 5"/>
+          </svg>
+          삼성엔지니어링
+        </div>
+        <div class="client-logo">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+            <line x1="4" y1="22" x2="4" y2="15"/>
+          </svg>
+          국방부 시설단
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Directions Section -->
+  <section class="section directions" id="directions">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">LOCATION</span>
+        <h2 class="section-title">찾아오는 길</h2>
+      </div>
+
+      <div class="directions-layout reveal">
+        <!-- Interactive Map Wrapper -->
+        <div class="map-container">
+          <div class="map-fallback" id="map-fallback">
+            <div class="map-grid-design"></div>
+            <div class="map-marker-mock">
+              <div class="map-marker-pin">
+                <!-- Map Pin Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div class="map-marker-pulse"></div>
+            </div>
+            <div class="map-fallback-info">
+              <div class="map-fallback-title">(주) 비에이텍 본사 및 공장</div>
+              <div class="map-fallback-address">경기도 김포시 통진읍 옹정리 43-4</div>
+            </div>
+          </div>
+          <!-- Kakao Map API Target Frame (Initially Hidden until map loader initializes) -->
+          <div id="kakao-map" class="map-real"></div>
+        </div>
+
+        <!-- Location detail panel -->
+        <div class="directions-info">
+          <div class="direction-box">
+            <h4 class="direction-label">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/>
+                <path d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              </svg>
+              공식 주소
+            </h4>
+            <p class="direction-value">경기도 김포시 통진읍 옹정로 66-18 (옹정리 43-4)</p>
+          </div>
+
+          <div class="direction-box">
+            <h4 class="direction-label">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/>
+                <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10M18 16h3a1 1 0 001-1v-4.5a1.5 1.5 0 00-.5-1.1L18 6h-5"/>
+              </svg>
+              자가용 이용 시
+            </h4>
+            <p class="direction-value">수도권 제2외곽순환고속도로 검단양촌IC 진출 후 통진 방면 약 15분 소요 (공장 내 상시 B2B 대형 트럭 주차 가능)</p>
+          </div>
+
+          <div class="direction-box">
+            <h4 class="direction-label">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"/>
+              </svg>
+              대중교통 이용 시
+            </h4>
+            <p class="direction-value">김포골드라인 구래역 하역 후 81-1번 버스 승차, 옹정리입구 정류장 하차 도보 5분</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Contact & Enquiry Form Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">CONTACT US</span>
+        <h2 class="section-title">비즈니스 협력 제안 및 문의</h2>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Info Column -->
+        <div class="contact-info-panel reveal">
+          <div>
+            <h3 class="contact-info-title">비에이텍은 신속하고 투명한 기술 상담을 지향합니다.</h3>
+            <p class="contact-info-desc">제품 사양 문의, 견적 요청, 설비 진단 등 어떤 내용이든 접수해 주시면 전문 엔지니어가 24시간 이내에 직접 메일이나 전화로 피드백을 전달해 드립니다.</p>
+          </div>
+          
+          <div class="contact-methods">
+            <!-- Method 1 -->
+            <div class="method-item">
+              <div class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div class="method-text">
+                <span class="method-label">대표 전화번호</span>
+                <span class="method-value">031-987-1234 (업무 시간: 09:00 - 18:00)</span>
+              </div>
+            </div>
+
+            <!-- Method 2 -->
+            <div class="method-item">
+              <div class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="method-text">
+                <span class="method-label">대표 이메일</span>
+                <span class="method-value">sales@batech.co.kr</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="form-panel reveal">
+          <form id="enquiry-form" novalidate>
+            <div class="form-group">
+              <label for="company" class="form-label">회사명 / 기관명</label>
+              <input type="text" id="company" name="company" class="form-control" placeholder="예: (주) 비에이텍">
+            </div>
             
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fa-solid fa-gears"></i>
-                </div>
-                <h3>워터펌프 제작</h3>
-                <p>고효율, 친환경 기술을 바탕으로 산업용 및 상업용 최고 품질의 워터펌프를 설계 및 제작합니다.</p>
+            <div class="form-group">
+              <label for="name" class="form-label">담당자 이름 *</label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="예: 홍길동">
+              <div class="form-error" id="error-name">담당자 이름을 입력해 주세요.</div>
             </div>
 
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fa-solid fa-wrench"></i>
-                </div>
-                <h3>전문 설치 시공</h3>
-                <p>수년간의 노하우를 지닌 전문 엔지니어가 현장에 최적화된 안전하고 완벽한 설치를 보장합니다.</p>
+            <div class="form-group">
+              <label for="email" class="form-label">이메일 주소 *</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="예: client@company.com">
+              <div class="form-error" id="error-email">올바른 이메일 주소를 입력해 주세요.</div>
             </div>
 
-            <div class="card">
-                <div class="card-icon">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                </div>
-                <h3>유지보수 및 수리</h3>
-                <p>신속하고 정확한 진단으로 펌프의 수명을 연장하고 최적의 성능을 유지할 수 있도록 관리합니다.</p>
+            <div class="form-group">
+              <label for="phone" class="form-label">연락처 *</label>
+              <input type="tel" id="phone" name="phone" class="form-control" required placeholder="예: 010-1234-5678">
+              <div class="form-error" id="error-phone">연락처를 입력해 주세요 (숫자 및 하이픈 포함 가능).</div>
             </div>
 
+            <div class="form-group">
+              <label for="message" class="form-label">문의 내용 *</label>
+              <textarea id="message" name="message" class="form-control" required placeholder="상세 제품 종류, 필요한 유량/양정 조건 등을 설명해 주십시오."></textarea>
+              <div class="form-error" id="error-message">문의 내용을 작성해 주세요.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">문의 접수하기</button>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>(주)비에이텍</h2>
-                <p>워터펌프 제작, 설치, 수리 전문기업</p>
-                <p>깨끗한 물을 위한 끊임없는 기술 혁신으로 고객과 함께 성장합니다.</p>
-            </div>
-            
-            <div class="footer-info">
-                <h3>Contact Us</h3>
-                <p><i class="fa-solid fa-location-dot"></i> 춘천시 퇴계로 1번지</p>
-                <p><i class="fa-solid fa-phone"></i> 033-248-1111</p>
-                <p><i class="fa-solid fa-fax"></i> 033-248-1234</p>
-                <p><i class="fa-solid fa-envelope"></i> aaa@naver.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 (주)비에이텍. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- 12. Interactive Modal View for Certificates -->
+  <div class="modal-overlay" id="cert-modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title-text">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+          <span>인증서 정보</span>
+        </h3>
+        <button class="modal-close" id="modal-close-btn" aria-label="닫기">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </div>
 
+  <!-- Toast Notification (Form Submit Success) -->
+  <div class="toast-notification" id="success-toast">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+    <span>문의가 정상적으로 접수되었습니다. 곧 연락드리겠습니다.</span>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>BATECH<span>(주) 비에이텍</span></h4>
+          <p>비에이텍은 신뢰성과 정밀한 유동 제어 공학을 접목해 최고의 산업용 펌프 솔루션을 공급하고 혁신 가치를 설계합니다.</p>
+        </div>
+        <div>
+          <h5 class="footer-nav-title">네비게이션</h5>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">회사소개</a></li>
+            <li><a href="#history" class="footer-link">연혁</a></li>
+            <li><a href="#equipment" class="footer-link">제품 소개</a></li>
+            <li><a href="#trust" class="footer-link">글로벌 인증</a></li>
+            <li><a href="#directions" class="footer-link">찾아오는 길</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="footer-nav-title">본사 및 공장 정보</h5>
+          <div class="footer-contact-info">
+            <div class="footer-info-item">
+              <span class="footer-info-label">주소</span>
+              <span>경기도 김포시 통진읍 옹정로 66-18</span>
+            </div>
+            <div class="footer-info-item">
+              <span class="footer-info-label">대표번호</span>
+              <span>TEL. 031-987-1234 | FAX. 031-987-5678</span>
+            </div>
+            <div class="footer-info-item">
+              <span class="footer-info-label">이메일</span>
+              <span>sales@batech.co.kr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2026 BATECH Co., Ltd. All Rights Reserved. Designed by Antigravity.
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Linkedin">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Behavior File -->
+  <script src="script.js"></script>
 </body>
 </html>
