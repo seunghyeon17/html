@@ -160,6 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '확인서 번호', value: '제 R180801-01794 호' },
         { label: '기업명', value: '비에이텍(주)' },
         { label: '대표자', value: '조세연' },
+        { label: '소재지(주소)', value: '강원특별자치도 춘천시 퇴계공단2길 64 (퇴계동)' },
         { label: '유효기간', value: '2024년 09월 14일 ~ 2027년 09월 13일' },
         { label: '확인 기관', value: '중소벤처기업부 장관' },
         { label: '인증 근거', value: '중소기업기술혁신 촉진법 제15조의3에 따른 경영혁신형 중소기업' }
@@ -358,9 +359,9 @@ document.addEventListener('DOMContentLoaded', () => {
         fallbackContainer.style.display = 'none';
         mapContainer.style.display = 'block';
 
-        // 옹정리 43-4 좌표설정 (위경도 수동 바인딩 필요)
-        // 김포시 통진읍 옹정리 43-4의 위경도는 대략 37.7126, 126.5862 부근입니다.
-        const position = new kakao.maps.LatLng(37.71261, 126.58621);
+        // 춘천시 퇴계공단2길 64 좌표설정
+        // 강원특별자치도 춘천시 퇴계동 1018-12(퇴계공단)의 위경도는 대략 37.8545, 127.7285 부근입니다.
+        const position = new kakao.maps.LatLng(37.85451, 127.72851);
         
         const mapOptions = {
           center: position,
@@ -379,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const iwContent = `
           <div style="padding:10px 15px; font-size:12px; font-weight:700; color:#0A2540; text-align:center; min-width:180px;">
             (주) 비에이텍 본사 및 공장
-            <div style="font-weight:400; color:#64748b; font-size:10px; margin-top:2px;">경기 김포시 통진읍 옹정로 66-18</div>
+            <div style="font-weight:400; color:#64748b; font-size:10px; margin-top:2px;">강원특별자치도 춘천시 퇴계공단2길 64</div>
           </div>
         `;
         const infowindow = new kakao.maps.InfoWindow({
