@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       // Formatting symbols
-      if (target === 20) {
+      if (target === 15) {
         element.textContent = current + '+';
       } else if (target === 1000) {
         element.textContent = current.toLocaleString() + '+';
@@ -331,6 +331,87 @@ document.addEventListener('DOMContentLoaded', () => {
           if (errDiv) errDiv.style.display = 'none';
         }
       });
+    });
+  }
+
+  // ==========================================
+  // 7.2. Product Portfolio Category Filtering
+  // ==========================================
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const productCards = document.querySelectorAll('.product-card');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Toggle active tab button
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      productCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (filterValue === 'all' || cardCategory === filterValue) {
+          card.classList.remove('hidden');
+          // Restart animation slightly
+          card.style.opacity = '0';
+          setTimeout(() => {
+            card.style.opacity = '1';
+          }, 50);
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // ==========================================
+  // 7.4. Track Record Performance Dashboard (Filter & Search)
+  // ==========================================
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const searchInput = document.getElementById('record-search');
+  const recordTable = document.getElementById('track-record-table');
+  const recordRows = recordTable ? recordTable.querySelectorAll('tbody tr') : [];
+  const noDataAlert = document.getElementById('record-no-data');
+
+  let currentRegion = 'all';
+  let currentSearchQuery = '';
+
+  const filterTrackRecord = () => {
+    let visibleCount = 0;
+
+    recordRows.forEach(row => {
+      const rowRegion = row.getAttribute('data-region');
+      const rowText = row.textContent.toLowerCase();
+      
+      const regionMatch = (currentRegion === 'all' || rowRegion === currentRegion);
+      const searchMatch = (rowText.includes(currentSearchQuery));
+
+      if (regionMatch && searchMatch) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    if (noDataAlert) {
+      noDataAlert.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+  };
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentRegion = btn.getAttribute('data-region');
+      filterTrackRecord();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      currentSearchQuery = e.target.value.toLowerCase().trim();
+      filterTrackRecord();
     });
   }
 
