@@ -2069,3 +2069,491 @@ textarea.form-control {
     white-space: nowrap;
   }
 }
+
+/* ==========================================
+ * GNB Music Controller & Equalizer
+ * ========================================== */
+.music-controller {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 14px;
+  border-radius: 30px;
+  transition: var(--transition-card);
+  margin-left: 20px;
+}
+
+.header.shrink .music-controller {
+  background: rgba(10, 37, 64, 0.5);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.music-controller:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--point-blue);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+.music-eq {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  width: 20px;
+  height: 15px;
+}
+
+.eq-bar {
+  width: 2.5px;
+  height: 3px;
+  background-color: var(--point-blue);
+  border-radius: 1px;
+  transition: height 0.2s ease;
+}
+
+/* EQ bounce animation when playing */
+.music-eq.playing .eq-bar {
+  animation: eq-bounce 1.2s ease infinite alternate;
+}
+
+.music-eq.playing .eq-bar:nth-child(1) { animation-delay: 0.1s; }
+.music-eq.playing .eq-bar:nth-child(2) { animation-delay: 0.4s; }
+.music-eq.playing .eq-bar:nth-child(3) { animation-delay: 0.2s; }
+.music-eq.playing .eq-bar:nth-child(4) { animation-delay: 0.5s; }
+
+@keyframes eq-bounce {
+  0% {
+    height: 3px;
+  }
+  100% {
+    height: 15px;
+  }
+}
+
+.music-btn {
+  background: transparent;
+  border: none;
+  color: var(--bg-pure);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: var(--transition-card);
+}
+
+.music-btn:hover {
+  color: var(--point-blue);
+  transform: scale(1.15);
+}
+
+.music-btn svg {
+  display: block;
+}
+
+/* ==========================================
+ * New Technology & Equipment (Video) Banner
+ * ========================================== */
+.new-tech {
+  background-color: var(--bg-pure);
+}
+
+.video-banner-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 42%; /* Premium 21:9 Aspect Ratio Banner format */
+  background: #000;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video-overlay-tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(10, 37, 64, 0.85) 0%, rgba(10, 37, 64, 0.3) 50%, rgba(10, 37, 64, 0.85) 100%);
+  z-index: 2;
+}
+
+.video-caption-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--bg-pure);
+  padding: 40px;
+}
+
+.video-tag {
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  color: var(--point-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  animation: fadeIn 1.2s forwards;
+}
+
+.video-main-title {
+  font-size: 2.5rem;
+  color: var(--bg-pure);
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  word-break: keep-all;
+}
+
+.video-sub-title {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.btn-video-modal {
+  padding: 14px 32px;
+  font-size: 0.935rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  border: 1px solid var(--point-blue);
+}
+
+.btn-video-modal:hover {
+  box-shadow: 0 4px 25px rgba(59, 130, 246, 0.55);
+}
+
+/* ==========================================
+ * Brochure Promotion Card (3D Hover Effect)
+ * ========================================== */
+.about-extra-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.license-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.extra-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.license-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.license-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.license-icon {
+  width: 42px;
+  height: 42px;
+  background-color: var(--bg-pure);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  color: var(--point-blue);
+  flex-shrink: 0;
+  border: 1px solid var(--border-light);
+}
+
+.license-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.license-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.license-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+}
+
+.license-detail {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.brochure-promo-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brochure-card-inner {
+  background-color: var(--bg-pure);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s ease;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.brochure-card-inner:hover {
+  transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+  box-shadow: var(--shadow-lg), 0 12px 24px rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.brochure-thumb-container {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.brochure-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brochure-card-inner:hover .brochure-thumb-img {
+  transform: scale(1.08);
+}
+
+.brochure-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 37, 64, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--bg-pure);
+  font-weight: 700;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(4px);
+}
+
+.brochure-card-inner:hover .brochure-hover-overlay {
+  opacity: 1;
+}
+
+.zoom-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--point-blue);
+  animation: pulseZoom 2.0s infinite alternate ease-in-out;
+}
+
+@keyframes pulseZoom {
+  0% { transform: scale(0.92); opacity: 0.8; }
+  100% { transform: scale(1.08); opacity: 1; }
+}
+
+.brochure-card-body {
+  padding: 20px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.brochure-card-body h4 {
+  font-size: 1.1rem;
+  color: var(--primary-deep);
+  margin-bottom: 8px;
+}
+
+.brochure-card-body p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.btn-brochure-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: var(--bg-soft);
+  color: var(--primary-deep);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  font-size: 0.825rem;
+  font-weight: 700;
+  width: 100%;
+  justify-content: center;
+  transition: var(--transition-card);
+}
+
+.btn-brochure-download:hover {
+  background-color: var(--point-blue);
+  color: var(--bg-pure);
+  border-color: var(--point-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-brochure-download svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ==========================================
+ * Custom Layouts for Video & Brochure Modals
+ * ========================================== */
+.video-modal-container {
+  max-width: 900px;
+  background-color: #000;
+}
+
+.video-modal-container .modal-header {
+  background-color: #0c101d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brochure-modal-container {
+  max-width: 800px;
+  background-color: #0f172a;
+}
+
+.brochure-modal-container .modal-header {
+  background-color: #1e293b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brochure-lightbox-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.brochure-lightbox-content::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.brochure-lightbox-content::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+
+/* ==========================================
+ * Additional Responsive Adaptations
+ * ========================================== */
+@media (max-width: 1024px) {
+  .video-container {
+    padding-top: 48%; /* Adjust video aspect ratio for smaller laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    justify-content: space-between;
+  }
+  
+  .music-controller {
+    margin-left: auto;
+    margin-right: 16px;
+    padding: 5px 10px;
+  }
+  
+  .music-eq {
+    display: none; /* Hide visual bars to save space in topbar on mobiles */
+  }
+  
+  .video-container {
+    padding-top: 56.25%; /* Traditional 16:9 aspect ratio on mobile */
+  }
+  
+  .video-caption-box {
+    padding: 20px;
+  }
+  
+  .video-main-title {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+  }
+  
+  .video-sub-title {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+  
+  .btn-video-modal {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+  
+  .about-extra-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .license-card, .brochure-promo-card {
+    padding: 24px;
+  }
+  
+  .brochure-thumb-container {
+    height: 150px;
+  }
+}
+
