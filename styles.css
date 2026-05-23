@@ -1663,6 +1663,7 @@ textarea.form-control {
   color: var(--primary-deep);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-card);
+  cursor: pointer;
 }
 
 .emblem-badge:hover {
@@ -2554,6 +2555,128 @@ textarea.form-control {
   
   .brochure-thumb-container {
     height: 150px;
+  }
+}
+
+/* ==========================================
+ * 4.5. ESG Campaign Section (물 활용 캠페인 카드뉴스)
+ * ========================================== */
+.campaign {
+  background-color: var(--bg-soft);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.campaign-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.campaign-image-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+  transition: var(--transition-card);
+  background-color: var(--bg-pure);
+  padding: 16px;
+}
+
+.campaign-image-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(10, 37, 64, 0.15);
+}
+
+.campaign-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.campaign-desc-card {
+  padding: 40px;
+  background-color: var(--bg-pure);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-card);
+}
+
+.campaign-desc-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.campaign-desc-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-deep);
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.campaign-desc-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--point-blue);
+}
+
+.campaign-desc-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.campaign-desc-text:last-of-type {
+  margin-bottom: 28px;
+}
+
+.campaign-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.campaign-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--point-blue);
+  background-color: rgba(59, 130, 246, 0.08);
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+/* PDF Modal Custom Styles */
+.pdf-modal-container {
+  max-width: 950px;
+  width: 95%;
+}
+
+.pdf-modal-container .modal-body {
+  padding: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .campaign-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .campaign-image-container {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .campaign-desc-card {
+    padding: 30px;
   }
 }
 

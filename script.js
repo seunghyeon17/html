@@ -621,6 +621,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==========================================
+  // 10.5. PDF Viewer Modal Control
+  // ==========================================
+  const pdfBadges = document.querySelectorAll('.emblem-badge[data-pdf-page]');
+  const pdfModalOverlay = document.getElementById('pdf-modal-overlay');
+  const pdfModalCloseBtn = document.getElementById('pdf-modal-close-btn');
+  const pdfModalIframe = document.getElementById('pdf-modal-iframe');
+  const pdfModalTitle = document.getElementById('pdf-modal-title');
+
+  const pdfTitles = {
+    "15": "특허 및 직접생산확인 증명서 (지명원 P.15)",
+    "17": "품질경영시스템 인증서 (지명원 P.17)",
+    "19": "우수중소기업 공로 표창 (지명원 P.19)"
+  };
+
+  const openPdfModal = (page) => {
+    if (!pdfModalOverlay || !pdfModalIframe) return;
+    
+    // Set iframe src with anchor page
+    pdfModalIframe.src = `./지명원 (1).pdf#page=${page}`;
+    
+    // Update modal title
+    if (pdfModalTitle && pdfTitles[page]) {
+      pdfModalTitle.textContent = pdfTitles[page];
+    } else if (pdfModalTitle) {
+      pdfModalTitle.textContent = "지명원 확인";
+    }
+    
+    // Open modal with scroll lock
+    openCustomModal(pdfModalOverlay);
+  };
+
+  const closePdfModal = () => {
+    if (!pdfModalOverlay || !pdfModalIframe) return;
+    closeCustomModal(pdfModalOverlay);
+    pdfModalIframe.src = ""; // Clear src to stop loading
+  };
+
+  pdfBadges.forEach(badge => {
+    badge.addEventListener('click', () => {
+      const page = badge.getAttribute('data-pdf-page');
+      openPdfModal(page);
+    });
+  });
+
+  if (pdfModalCloseBtn) {
+    pdfModalCloseBtn.addEventListener('click', closePdfModal);
+  }
+
+  if (pdfModalOverlay) {
+    pdfModalOverlay.addEventListener('click', (e) => {
+      if (e.target === pdfModalOverlay) {
+        closePdfModal();
+      }
+    });
+  }
+
   // Escape key support for all modals
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -630,6 +687,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (brochureModalOverlay && brochureModalOverlay.classList.contains('active')) {
         closeCustomModal(brochureModalOverlay);
+      }
+      if (pdfModalOverlay && pdfModalOverlay.classList.contains('active')) {
+        closePdfModal();
       }
     }
   });

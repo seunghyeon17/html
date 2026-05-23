@@ -122,19 +122,26 @@
           
           <!-- Emblem Badges -->
           <div class="badge-container" style="margin-top: 32px;">
-            <div class="emblem-badge" title="정밀 워터펌프 직접생산확인 인증 기업">
+            <div class="emblem-badge" title="정밀 워터펌프 직접생산확인 인증 기업" data-pdf-page="15">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 <path d="M12 8v8M9 12h6" />
               </svg>
               <span>특허 및 직접생산확인 증명 보유 기업</span>
             </div>
-            <div class="emblem-badge" title="우수 중소기업 표창">
+            <div class="emblem-badge" title="우수 중소기업 표창" data-pdf-page="19">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="8" r="7" />
                 <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
               </svg>
               <span>강원특별자치도 우수중소기업 공로 표창 수상</span>
+            </div>
+            <div class="emblem-badge" title="품질경영시스템 인증서" data-pdf-page="17">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <span>품질경영시스템 인증서</span>
             </div>
           </div>
         </div>
@@ -249,6 +256,36 @@
                 <span>브로슈어 PDF 다운로드</span>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.5. ESG Campaign Section (물 활용 캠페인 카드뉴스) -->
+  <section class="section campaign" id="campaign">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">ESG CAMPAIGN</span>
+        <h2 class="section-title">비에이텍과 함께하는 물 활용 캠페인</h2>
+      </div>
+      
+      <div class="campaign-layout reveal">
+        <div class="campaign-image-container">
+          <img src="카드뉴스.png" alt="비에이텍 친환경 물 활용 캠페인 카드뉴스" class="campaign-image">
+        </div>
+        <div class="campaign-desc-card">
+          <h3 class="campaign-desc-title">지속가능한 미래를 위한 실천</h3>
+          <p class="campaign-desc-text">
+            BATECH(주) 비에이텍은 친환경 수처리 솔루션과 지속가능한 물 관리 엔지니어링을 실천하고 있습니다. 수자원의 깨끗하고 효율적인 사용을 극대화하여 지역 사회와 산업 전반에 기여하는 ESG 경영의 핵심적 가치를 추구합니다.
+          </p>
+          <p class="campaign-desc-text">
+            미래 세대를 위한 친환경 물 환경 구축에 동참하며, 고효율 친환경 펌프 시스템 보급을 통해 기후변화 대응과 탄소 배출 저감에 앞장서 나아가겠습니다.
+          </p>
+          <div class="campaign-badges">
+            <span class="campaign-badge">#친환경수처리</span>
+            <span class="campaign-badge">#지속가능한기술</span>
+            <span class="campaign-badge">#ESG경영</span>
           </div>
         </div>
       </div>
@@ -904,6 +941,25 @@
         <div class="brochure-lightbox-content" style="max-height: 70vh; overflow-y: auto; display: inline-block; width: 100%;">
           <img src="브로슈어.png" alt="비에이텍 지명원 브로슈어 크게 보기" style="width: 100%; height: auto; max-width: 100%; display: block; margin: 0 auto; border-radius: 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF Viewer Modal Overlay -->
+  <div class="modal-overlay" id="pdf-modal-overlay">
+    <div class="modal-container pdf-modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px; height:24px; color:#3B82F6;">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+          </svg>
+          <span id="pdf-modal-title">지명원 확인</span>
+        </h3>
+        <button class="modal-close" id="pdf-modal-close-btn" aria-label="닫기">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 0; background: #f8fafc; height: 75vh;">
+        <iframe id="pdf-modal-iframe" src="" width="100%" height="100%" style="border: none; display: block;"></iframe>
       </div>
     </div>
   </div>
