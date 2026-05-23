@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -18,6 +18,9 @@
 </head>
 <body>
 
+  <!-- Background Music Audio Tag -->
+  <audio id="bg-music" src="웹사이트 배경음악.mp3" loop></audio>
+
   <!-- 1. Preloader Screen -->
   <div id="preloader">
     <div class="preloader-logo">
@@ -35,6 +38,28 @@
       <a href="#hero" class="logo">
         BATECH<span>(주) 비에이텍</span>
       </a>
+      
+      <!-- GNB Music Controller & Equalizer -->
+      <div class="music-controller">
+        <div class="music-eq" id="music-eq">
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+        </div>
+        <button class="music-btn" id="music-toggle-btn" aria-label="배경음악 토글">
+          <!-- Play Icon -->
+          <svg class="icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <!-- Pause Icon -->
+          <svg class="icon-pause" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display: none;">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </button>
+      </div>
+
       <button class="menu-toggle" id="menu-toggle" aria-label="메뉴 열기">
         <span></span>
         <span></span>
@@ -201,7 +226,7 @@
           <h3 class="extra-section-title">지명원 및 기업 브로슈어 보기</h3>
           <div class="brochure-card-inner" id="brochure-card-trigger">
             <div class="brochure-thumb-container">
-              <img src="브로슈어.png" alt="동성종합건설 지명원 브로슈어 썸네일" class="brochure-thumb-img">
+              <img src="브로슈어.png" alt="비에이텍 지명원 브로슈어 썸네일" class="brochure-thumb-img">
               <div class="brochure-hover-overlay">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="zoom-icon">
                   <circle cx="11" cy="11" r="8"></circle>
@@ -213,9 +238,9 @@
               </div>
             </div>
             <div class="brochure-card-body">
-              <h4>(주)동성종합건설 기업 지명원</h4>
+              <h4>BATECH(주) 비에이텍 기업 지명원 및 기술 브로슈어</h4>
               <p>회사의 비전, 보유 신기술, 공사 실적 및 핵심 역량이 담긴 최신 기업 지명원 및 브로슈어를 확인할 수 있습니다.</p>
-              <a href="지명원 (1).pdf" class="btn btn-brochure-download" download="동성종합건설_기업지명원.pdf" onclick="event.stopPropagation();">
+              <a href="지명원 (1).pdf" class="btn btn-brochure-download" download="batech_brochure.pdf" onclick="event.stopPropagation();">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                   <polyline points="7 10 12 15 17 10" />
@@ -421,11 +446,11 @@
 
       <div class="facility-layout">
         <div class="facility-img-wrapper reveal">
-          <img src="assets/factory_facility.png" alt="비에이텍 생산 제조 라인" class="facility-img">
+          <video src="펌프 동영상.mp4" autoplay muted loop playsinline class="facility-video" style="width:100%; border-radius:8px; box-shadow: var(--shadow-lg);"></video>
         </div>
         
         <div class="facility-desc reveal">
-          <h3>엄격한 전수 검사 시스템과 무결점 생산 라인</h3>
+          <h3>엄격한 전수 검사 시스템과 무결점 생산 라이브</h3>
           <p>비에이텍의 전 공정은 부품의 입고 단계부터 최종 시운전 단계까지 디지털 통합 시스템(ERP/MES) 하에 철저히 추적 관리됩니다.</p>
           <p>출하되는 모든 부스터 펌프 시스템은 전용 정밀 테스트 베드에서 수압, 유량, 진동 및 전류 변화를 100% 전수 시뮬레이션 검사한 후에 포장 및 배송됩니다.</p>
           
@@ -436,7 +461,7 @@
             </div>
             <div class="feature-box">
               <h4>정밀 조립 공정</h4>
-              <p>숙련된 엔지니어들과 자동화 정밀 설비의 조화로 미세 누수를 원천 차단합니다.</p>
+              <p>실제 제조 전문 엔지니어와 자동화 정밀 설비의 조화로 미세 누수를 원천 차단합니다.</p>
             </div>
           </div>
         </div>
@@ -690,7 +715,7 @@
               <div class="map-marker-pulse"></div>
             </div>
             <div class="map-fallback-info">
-              <div class="map-fallback-title">(주)동성종합건설 본사 및 R&D 기지</div>
+              <div class="map-fallback-title">BATECH(주) 비에이텍 본사 및 생산 공장</div>
               <div class="map-fallback-address">강원특별자치도 춘천시 퇴계공단2길 64 (퇴계동)</div>
             </div>
           </div>
@@ -748,7 +773,7 @@
         <!-- Info Column -->
         <div class="contact-info-panel reveal">
           <div>
-            <h3 class="contact-info-title">동성종합건설은 신속하고 신뢰할 수 있는 기술 상담을 지향합니다.</h3>
+            <h3 class="contact-info-title">비에이텍은 신속하고 신뢰할 수 있는 기술 상담을 지향합니다.</h3>
             <p class="contact-info-desc">공사 견적 문의, 현장 안전진단, 협력 시공 기술 적용 등 문의사항을 접수해 주시면 전문 공정 관리자 및 엔지니어가 24시간 이내에 직접 피드백을 전달해 드립니다.</p>
           </div>
           
@@ -762,7 +787,7 @@
               </div>
               <div class="method-text">
                 <span class="method-label">대표 전화번호</span>
-                <span class="method-value">033-264-1234 (업무 시간: 09:00 - 18:00)</span>
+                <span class="method-value">033-248-1111 (업무 시간: 09:00 - 18:00)</span>
               </div>
             </div>
  
@@ -776,7 +801,7 @@
               </div>
               <div class="method-text">
                 <span class="method-label">대표 이메일</span>
-                <span class="method-value">contact@dongseong.co.kr</span>
+                <span class="method-value">contact@batech.co.kr</span>
               </div>
             </div>
           </div>
@@ -787,7 +812,7 @@
           <form id="enquiry-form" novalidate>
             <div class="form-group">
               <label for="company" class="form-label">회사명 / 기관명</label>
-              <input type="text" id="company" name="company" class="form-control" placeholder="예: (주)동성종합건설">
+              <input type="text" id="company" name="company" class="form-control" placeholder="예: BATECH(주) 비에이텍">
             </div>
             
             <div class="form-group">
@@ -871,13 +896,13 @@
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
           </svg>
-          <span>(주)동성종합건설 기업 지명원 및 브로슈어</span>
+          <span>BATECH(주) 비에이텍 기업 지명원 및 기술 브로슈어</span>
         </h3>
         <button class="modal-close" id="brochure-modal-close-btn" aria-label="닫기">&times;</button>
       </div>
       <div class="modal-body" style="background-color: #0f172a; padding: 24px; text-align: center;">
         <div class="brochure-lightbox-content" style="max-height: 70vh; overflow-y: auto; display: inline-block; width: 100%;">
-          <img src="브로슈어.png" alt="동성종합건설 지명원 브로슈어 크게 보기" style="width: 100%; height: auto; max-width: 100%; display: block; margin: 0 auto; border-radius: 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+          <img src="브로슈어.png" alt="비에이텍 지명원 브로슈어 크게 보기" style="width: 100%; height: auto; max-width: 100%; display: block; margin: 0 auto; border-radius: 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
         </div>
       </div>
     </div>
@@ -896,8 +921,8 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <h4>DONGSEONG<span>(주)동성종합건설</span></h4>
-          <p>동성종합건설은 신뢰와 안전을 최고 가치로 두며, 선진 기술력과 정밀 시공을 통해 명품 공간과 지속 가능한 인프라를 건설합니다.</p>
+          <h4>BATECH<span>(주) 비에이텍</span></h4>
+          <p>비에이텍은 신뢰와 안전을 최고 가치로 두며, 선진 기술력과 정밀 시공을 통해 명품 공간과 지속 가능한 인프라를 건설합니다.</p>
         </div>
         <div>
           <h5 class="footer-nav-title">네비게이션</h5>
@@ -918,11 +943,11 @@
             </div>
             <div class="footer-info-item">
               <span class="footer-info-label">대표번호</span>
-              <span>TEL. 033-264-1234 | FAX. 033-251-5678</span>
+              <span>TEL. 033-248-1111 | FAX. 033-248-1234</span>
             </div>
             <div class="footer-info-item">
               <span class="footer-info-label">이메일</span>
-              <span>contact@dongseong.co.kr</span>
+              <span>contact@batech.co.kr</span>
             </div>
           </div>
         </div>
@@ -930,7 +955,7 @@
  
       <div class="footer-bottom">
         <div class="copyright">
-          &copy; 2026 Dongseong Comprehensive Construction Co., Ltd. All Rights Reserved. Designed by Antigravity.
+          &copy; 2026 BATECH Co., Ltd. All Rights Reserved. Designed by Antigravity.
         </div>
         <div class="social-links">
           <a href="#" class="social-icon" aria-label="Linkedin">

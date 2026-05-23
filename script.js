@@ -1,4 +1,4 @@
-﻿/**
+/**
  * (주) 비에이텍 프리미엄 웹 인터랙션 스크립트
  * Senior UI/UX & Frontend Development
  */
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { label: '인증서명', value: '위생안전기준 인증서 (수도용)' },
         { label: '인증번호', value: 'KCW-2025-0163' },
         { label: '제품명 및 용도', value: '부스터 펌프 시스템 (일반수도용자재)' },
-        { label: '기술개발사', value: '비에이텍(주) (동성종합건설 기술제휴사)' },
+        { label: '기술개발사', value: '비에이텍(주)' },
         { label: '최초 인증일', value: '2025년 09월 19일' },
         { label: '정기검사 신청기한', value: '2027년 09월 18일 (유효기간)' },
         { label: '인증 기관', value: '한국물기술인증원장' },
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       specs: [
         { label: '확인서명', value: '경영혁신형 중소기업(MAIN-BIZ) 확인서' },
         { label: '확인서 번호', value: '제 R180801-01794 호' },
-        { label: '기업명', value: '비에이텍(주) (기술제휴사)' },
+        { label: '기업명', value: '비에이텍(주)' },
         { label: '대표자', value: '조세연' },
         { label: '소재지(주소)', value: '강원특별자치도 춘천시 퇴계공단2길 64 (퇴계동)' },
         { label: '유효기간', value: '2024년 09월 14일 ~ 2027년 09월 13일' },
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       specs: [
         { label: '인증서명', value: '품질경영시스템 인증서 (국문 표준)' },
         { label: '인증서 번호', value: 'Q1291124' },
-        { label: '인증 대상', value: '비에이텍(주) (기술제휴사)' },
+        { label: '인증 대상', value: '비에이텍(주)' },
         { label: '인증 범위', value: '부스터펌프시스템, 벌류트, 정량, 수중, 오수, 슬러지, 심정용, 전진공동 펌프의 제조' },
         { label: '최초 인증일자', value: '2024년 08월 23일' },
         { label: '발행 일자', value: '2024년 08월 23일' },
@@ -460,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Info window (Tooltip)
         const iwContent = `
           <div style="padding:10px 15px; font-size:12px; font-weight:700; color:#0A2540; text-align:center; min-width:180px;">
-            (주)동성종합건설 본사 및 R&D 기지
+            BATECH(주) 비에이텍 본사 및 생산 공장
             <div style="font-weight:400; color:#64748b; font-size:10px; margin-top:2px;">강원특별자치도 춘천시 퇴계공단2길 64</div>
           </div>
         `;
