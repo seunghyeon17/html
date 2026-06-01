@@ -2266,20 +2266,12 @@ textarea.form-control {
  * Brochure Promotion Card (3D Hover Effect)
  * ========================================== */
 .about-extra-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: stretch;
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
 }
 
-.license-card {
-  background: var(--bg-soft);
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-}
+
 
 .extra-section-title {
   font-size: 1.25rem;
@@ -2290,55 +2282,6 @@ textarea.form-control {
   border-bottom: 2px solid var(--border-light);
 }
 
-.license-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex-grow: 1;
-}
-
-.license-list li {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.license-icon {
-  width: 42px;
-  height: 42px;
-  background-color: var(--bg-pure);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-sm);
-  color: var(--point-blue);
-  flex-shrink: 0;
-  border: 1px solid var(--border-light);
-}
-
-.license-icon svg {
-  width: 20px;
-  height: 20px;
-}
-
-.license-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.license-name {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--primary-deep);
-}
-
-.license-detail {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
 .brochure-promo-card {
   background: var(--bg-soft);
   border: 1px solid var(--border-light);
@@ -2346,6 +2289,8 @@ textarea.form-control {
   padding: 32px;
   display: flex;
   flex-direction: column;
+  max-width: 600px;
+  width: 100%;
 }
 
 .brochure-card-inner {
@@ -2555,12 +2500,7 @@ textarea.form-control {
     font-size: 0.8rem;
   }
   
-  .about-extra-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .license-card, .brochure-promo-card {
+  .brochure-promo-card {
     padding: 24px;
   }
   
